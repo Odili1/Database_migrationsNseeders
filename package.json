@@ -2,7 +2,7 @@
   "name": "database_migrationsnseeders",
   "version": "1.0.0",
   "description": "Implementing migrations with Sequelize (main branch) and Mongoose (mongo branch)",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/app.js"
@@ -15,5 +15,8 @@
     "express": "^4.18.2",
     "mysql2": "^3.6.1",
     "sequelize": "^6.33.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.1"
   }
 }
