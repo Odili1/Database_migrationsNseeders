@@ -11,11 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.Products, {foreignKey: categories_id})
+      this.hasMany(models.Products, {foreignKey: "categories_id"})
     }
   }
   Categories.init({
-    id: DataTypes.INTEGER,
     name: DataTypes.STRING,
     active: DataTypes.BOOLEAN
   }, {
