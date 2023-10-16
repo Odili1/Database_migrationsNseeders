@@ -16,7 +16,16 @@ module.exports = {
         type: Sequelize.STRING
       },
       size: {
-        type: Sequelize.ENUM
+        type: Sequelize.ENUM,
+        values: ["small", "medium", "large"]
+      },
+      categories_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+        model: 'Categories',
+        key: 'id'
+        }
       },
       created_at: {
         allowNull: false,

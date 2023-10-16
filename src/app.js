@@ -14,7 +14,7 @@ app.use(express.json());
 
 
 // Routes
-app.use('/', userRoutes)
+app.use('/users', userRoutes)
 
 
 // Testing DB connection

@@ -11,17 +11,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.Users)
+      this.belongsTo(models.Users, {foreignKey: user_id})
     }
   }
   Admins.init({
     username: DataTypes.STRING,
-    role: DataTypes.STRING
+    role: DataTypes.STRING,
+    user_id: {
+      type: DataTypes.INTEGER
+    }
   }, {
     sequelize,
     modelName: 'Admins',
     timestamps: true,
-    createdAt: "create_at",
+    createdAt: "created_at",
     updatedAt: "updated_at"
   });
   return Admins;

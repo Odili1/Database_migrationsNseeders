@@ -11,25 +11,32 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.hasOne(models.Admins, {foreignKey: user_id})
     }
   }
   Users.init({
     id: DataTypes.INTEGER,
     fullname: DataTypes.STRING,
-    username: DataTypes.STRING,
-    email: DataTypes.STRING,
+    username: {
+      type: DataTypes.STRING,
+      unique: true
+    },
+    email: {
+      type: DataTypes.STRING,
+      unique: true
+    },
     phone_number: DataTypes.STRING,
     password: DataTypes.STRING,
     gender: {
       type: DataTypes.ENUM,
       values: ["male", "female"]
     },
-    counry: DataTypes.STRING
+    country: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',
     timestamps: true,
-    createdAt: "create_at",
+    createdAt: "created_at",
     updatedAt: "updated_at"
   });
   return Users;
