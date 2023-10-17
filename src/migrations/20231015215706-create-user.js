@@ -36,6 +36,11 @@ module.exports = {
       country: {
         type: Sequelize.STRING
       },
+      role: {
+        type: Sequelize.ENUM,
+        values: ["admin", "user"],
+        defaultValue: "user"
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,

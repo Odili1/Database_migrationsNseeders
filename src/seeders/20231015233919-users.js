@@ -22,6 +22,7 @@ module.exports = {
         password: "joan123",
         gender: "female",
         country: "nigeria",
+        role: "admin",
         created_at: new Date(),
         updated_at: new Date(),
       }

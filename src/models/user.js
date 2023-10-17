@@ -30,6 +30,10 @@ module.exports = (sequelize, DataTypes) => {
         values: ["male", "female"],
       },
       country: DataTypes.STRING,
+      role: {
+        type: DataTypes.ENUM,
+        values: ["admin", "user"],
+      }
     },
     {
       sequelize,
