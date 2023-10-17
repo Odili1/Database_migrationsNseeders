@@ -1,6 +1,7 @@
 const express = require("express");
 const sequelize = require('./database/sequelize');
-const userRoutes = require('./users/user.routes')
+const userRoutes = require('./users/user.routes');
+const productsRoutes = require('./products/products.routes');
 require('dotenv').config();
 
 // Intialize App
@@ -14,7 +15,8 @@ app.use(express.json());
 
 
 // Routes
-app.use('/users', userRoutes)
+app.use('/users', userRoutes);
+app.use('/products', productsRoutes);
 
 
 // Uncaught Route
