@@ -1,4 +1,4 @@
-const sequelize = require("../Database/sequelize");
+const sequelize = require("../database/sequelize");
 const { Products, Categories } = require("./../models");
 
 exports.viewItems = async (req, res) => {
