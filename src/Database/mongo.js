@@ -11,6 +11,8 @@ exports.connectDB = (uri) => {
             console.log(`Database connected successfully`);
         });
 
+        mongoose.connection.on("disconnected", () => console.log("mongoDb disconnected!"));
+
         mongoose.connection.on('error', (error) => {
             console.log(`An error occured while connecting to database ${error}`);
         })
